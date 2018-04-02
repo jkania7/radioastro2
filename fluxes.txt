@@ -1,0 +1,6 @@
+#Frequency(GHz)	FluxDensity(uJy)	FluxError(uJy)
+1.63		250			39
+3.0		206			17
+6.0		203			7
+15.0		103			7
+
