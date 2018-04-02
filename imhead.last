@@ -1,7 +1,7 @@
 taskname           = "imhead"
-imagename          =  "image1.fits"
+imagename          =  "xband2.fits"
 mode               =  "summary"
 hdkey              =  ""
 hdvalue            =  ""
 verbose            =  False
-#imhead(imagename="image1.fits",mode="summary",hdkey="",hdvalue="",verbose=False)
+#imhead(imagename="xband2.fits",mode="summary",hdkey="",hdvalue="",verbose=False)
