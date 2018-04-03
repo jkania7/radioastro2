@@ -1,0 +1,2 @@
+#CRTF
+ann ellipse [[05:31:58.70015, +033.08.52.5956], [0.1563arcsec, 0.1377arcsec], -75.08215332deg] coord=J2000, corr=[I], linewidth=1, linestyle=-, symsize=1, symthick=1, color=green, font=Helvetica, fontsize=10, fontstyle=bold, usetex=false

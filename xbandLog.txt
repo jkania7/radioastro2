@@ -1,0 +1,46 @@
+****** Fit performed at Tue Apr 3 00:04:40 2018******
+
+Input parameters ---
+       --- imagename:           /Users/jkania/Documents/radioastro2/xband.fits
+       --- region:              
+       --- channel:             0
+       --- stokes:              I
+       --- mask:                
+       --- include pixel range: []
+       --- exclude pixel range: []
+*** Details of fit for channel number 0
+Number of pixels used in fit: 1190
+Input and residual image statistics (to be used as a rough guide only as to goodness of fit)
+       --- Standard deviation of input image: 1.99859e-05 Jy
+       --- Standard deviation of residual image: 4.11755e-06 Jy
+       --- RMS of input image: 2.09427e-05 Jy
+       --- RMS of residual image: 4.13493e-06 Jy
+
+Fit on xband.fits component 0
+Position ---
+       --- ra:    05:31:58.69964 +/- 0.00068 s (0.00857 arcsec along great circle)
+       --- dec: +033.08.52.53737 +/- 0.00781 arcsec
+       --- ra:  1023.410 +/- 0.086 pixels
+       --- dec: 1023.766 +/- 0.078 pixels
+
+Image component size (convolved with beam) ---
+       --- major axis FWHM:     685 +/- 21 marcsec
+       --- minor axis FWHM:     630 +/- 18 marcsec
+       --- position angle: 118 +/- 14 deg
+
+Clean beam size ---
+       --- major axis FWHM: 0.65 arcsec
+       --- minor axis FWHM: 0.63 arcsec
+       --- position angle: -56.04 deg
+Image component size (deconvolved from beam) ---
+    Component is a point source
+    It may be as large as 0.28 arcsec x 0.14 arcsec
+
+Flux ---
+       --- Integrated:   150.2 +/- 7.5 uJy
+       --- Peak:         143.2 +/- 4.2 uJy/beam
+       --- Polarization: I
+
+Spectrum ---
+      --- frequency:        9.998998 GHz (2.998225 cm)
+

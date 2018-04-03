@@ -1,7 +1,7 @@
-****** Fit performed at Mon Apr 2 17:41:09 2018******
+****** Fit performed at Mon Apr 2 22:38:52 2018******
 
 Input parameters ---
-       --- imagename:           /Users/jkania/Documents/radioastro2/sband.fits
+       --- imagename:           /Users/jkania/Documents/radioastro2/kband.fits
        --- region:              
        --- channel:             0
        --- stokes:              I
@@ -9,24 +9,24 @@ Input parameters ---
        --- include pixel range: []
        --- exclude pixel range: []
 *** Details of fit for channel number 0
-Number of pixels used in fit: 504
+Number of pixels used in fit: 810
 Input and residual image statistics (to be used as a rough guide only as to goodness of fit)
-       --- Standard deviation of input image: 1.60223e-05 Jy
-       --- Standard deviation of residual image: 4.33448e-06 Jy
-       --- RMS of input image: 1.87545e-05 Jy
-       --- RMS of residual image: 4.3481e-06 Jy
+       --- Standard deviation of input image: 1.36576e-05 Jy
+       --- Standard deviation of residual image: 4.28461e-06 Jy
+       --- RMS of input image: 1.50157e-05 Jy
+       --- RMS of residual image: 4.28326e-06 Jy
 
-Fit on sband.fits component 0
+Fit on kband.fits component 0
 Position ---
-       --- ra:    05:31:58.70014 +/- 0.00069 s (0.00862 arcsec along great circle)
-       --- dec: +033.08.52.59583 +/- 0.00946 arcsec
+       --- ra:    05:31:58.70015 +/- 0.00068 s (0.00851 arcsec along great circle)
+       --- dec: +033.08.52.59564 +/- 0.00930 arcsec
        --- ra:  510.24 +/- 0.23 pixels
-       --- dec: 512.95 +/- 0.25 pixels
+       --- dec: 512.94 +/- 0.25 pixels
 
 Image component size (convolved with beam) ---
        --- major axis FWHM:     318 +/- 22 marcsec
        --- minor axis FWHM:     303 +/- 20 marcsec
-       --- position angle: 5.6 +/- 55.9 deg
+       --- position angle: 1.8 +/- 58.3 deg
 
 Clean beam size ---
        --- major axis FWHM: 0.31 arcsec
@@ -34,11 +34,11 @@ Clean beam size ---
        --- position angle: -75.08 deg
 Image component size (deconvolved from beam) ---
     Component is a point source
-    It may be as large as 0.19 arcsec x 0.12 arcsec
+    It may be as large as 0.19 arcsec x 0.13 arcsec
 
 Flux ---
-       --- Integrated:   72.8 +/- 8.3 uJy
-       --- Peak:         65.1 +/- 4.5 uJy/beam
+       --- Integrated:   72.8 +/- 8.2 uJy
+       --- Peak:         65.1 +/- 4.4 uJy/beam
        --- Polarization: I
 
 Spectrum ---
