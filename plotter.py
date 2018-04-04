@@ -54,7 +54,8 @@ ax1.set_title(r"Continuum Spectrum")
 ax1.set_xlabel(r"$\log_{10}(\nu$ [GHz])")
 ax1.set_ylabel(r"$\log_{10}$(Flux Density [$\mu$Jy])")
 ax1.legend(["Cubic Spline","Measured Flux Density"], loc='best')
-fig1.savefig('fluxVsFreq.png', dpi=300)#, bbox_inches='tight'
+ax1.margins(0.05)
+fig1.savefig('fluxVsFreq.png', dpi=300, bbox_inches='tight')
 #plt.legend()
 #plt.show()
 
@@ -66,7 +67,8 @@ ax2.set_title(r"Spectral index as a function of frequency")
 ax2.set_xlabel(r"$\log_{10}(\nu$ [GHz])")
 ax2.set_ylabel(r"$\alpha$")
 ax2.legend(["Derivative of Cubic Spline"], loc='best')
-fig2.savefig('spectral index.png', dpi=300)#,  bbox_inches='tight')
+ax2.margins(0.05)
+fig2.savefig('spectral index.png', dpi=300,  bbox_inches='tight')
 
 fig3 = plt.figure()#plot fluxes
 ax3 = fig3.add_subplot(111)
@@ -80,6 +82,7 @@ ax3.set_title(r"Continuum Spectrum")
 ax3.set_xlabel(r"$\log_{10}(\nu$ [GHz])")
 ax3.set_ylabel(r"$\log_{10}$(Flux Density [$\mu$Jy])")
 ax3.legend([r"Best Fit Line ({0:.3f}$\pm${1:.3f})x+{2:.3f}$\pm${3:.3f}".format(popt1[0],perr1[0],popt1[1],perr1[1]),"Best Fit Line ({0:.3f}$\pm${1:.3f})x+{2:.3f}$\pm${3:.3f}".format(popt2[0],perr2[0],popt2[1],perr2[1]),"Measured Flux Density"], loc='best')
-fig3.savefig('fluxVsFreqLineFit.png', dpi=300)#, bbox_inches='tight'
+ax3.margins(0.05)
+fig3.savefig('fluxVsFreqLineFit.png', dpi=300, bbox_inches='tight')
 
 plt.show()
