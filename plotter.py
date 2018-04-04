@@ -9,6 +9,9 @@ import scipy as s
 def line(x,b,c):
     return x*b+c
 
+def power(x,a,b):
+    return b*x**a
+
 rc('font',**{'family':'sans-serif','sans-serif':['Computer Modern Roman','Helvetica']})#makes the plots have pretty fonts
 rc('text', usetex=True)
 
@@ -34,8 +37,12 @@ popt1line, pcov1line = curve_fit(line, fluxes[0:3,0],fluxes[0:3,1])
 popt2line, pcov2line = curve_fit(line, fluxes[2:6,0],fluxes[2:6,1])
 perr1line = np.sqrt(np.diag(pcov1))
 perr2line = np.sqrt(np.diag(pcov2))
+x1line =  np.arange(np.amin(fluxes[0:3,0]), np.max(fluxes[0:3,0]),0.01)
+x2line =  np.arange(np.amin(fluxes[2:6,0]), np.max(fluxes[2:6,0]),0.01)
 
-
+linefull =  np.arange(np.amin(fluxes[:,0]), np.max(fluxes[:,0]),0.01)
+poptpower, pcovpower = curve_fit(power, fluxes[:,0], fluxes[:,1], bounds=([-2,0],[0,1000]))
+perrpower = np.sqrt(np.diag(pcovpower))
 print("area under the curve = {0} uJy".format(s.integrate.simps(fluxes[:,1],fluxes[:,0])))
 #splineFull = CubicSpline(fluxes[:,0],fluxes[:,1])
 #xFull =  np.arange(np.amin(fluxes[:,0]), np.max(fluxes[:,0]),0.01)
@@ -95,6 +102,20 @@ ax3.legend([r"Best Fit Line ({0:.3f}$\pm${1:.3f})x+{2:.3f}$\pm${3:.3f}".format(p
 ax3.margins(0.05)
 fig3.savefig('fluxVsFreqLineFit.png', dpi=300, bbox_inches='tight')
 
+fig4 = plt.figure()#plot fluxes
+ax4 = fig4.add_subplot(111)
+ax4.errorbar(fluxes[:,0],fluxes[:,1],yerr=fluxes[:,2],fmt='o')
+#print(xspline)
+#print(spline(xspline))
+#ax3.plot(xspline,spline(xspline))
+#ax3.plot(xspline,uspline(xspline))
+ax4.plot(linefull,power(linefull,*poptpower))
+ax4.set_title(r"Continuum Spectrum")
+ax4.set_xlabel(r"$\nu$ [GHz])")
+ax4.set_ylabel(r"Flux Density [$\mu$Jy]")
+ax4.legend([r"Best Fit Power ({2:.4f}$\pm${3:.4f})$\nu$({0:.0f}$\pm${1:.0f})".format(poptpower[1],perrpower[1],poptpower[0],perrpower[0])], loc='best')
+ax4.margins(0.05)
+fig4.savefig('fluxnolog.png', dpi=300, bbox_inches='tight')
 
 
 plt.show()
