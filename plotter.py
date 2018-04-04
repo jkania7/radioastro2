@@ -66,7 +66,7 @@ ax2.set_title(r"Spectral index as a function of frequency")
 ax2.set_xlabel(r"$\log_{10}(\nu$ [GHz])")
 ax2.set_ylabel(r"$\alpha$")
 ax2.legend(["Derivative of Cubic Spline"], loc='best')
-fig2.savefig('spectral index.png', bbox_inches='tight', dpi=300)
+fig2.savefig('spectral index.png', dpi=300)#,  bbox_inches='tight')
 
 fig3 = plt.figure()#plot fluxes
 ax3 = fig3.add_subplot(111)
